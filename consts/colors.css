@@ -1,0 +1,10 @@
+/* colors.css */
+:root {
+  --blue-color: #01aeef;
+  --dark-blue-color: #365da8;
+  --red-color: #ec3f3c;
+  --text-color: #333333;
+  --background-color: #dfdddd;
+  --black-color: #000000;
+  --white-color: #ffffff;
+}
