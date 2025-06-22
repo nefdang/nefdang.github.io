@@ -281,3 +281,124 @@ footer {
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+/* Carousel for Our Services  */
+
+/* Container for the horizontal slider */
+.cards {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Hide scrollbar (optional) */
+.cards::-webkit-scrollbar {
+  display: none;
+}
+.cards {
+  scrollbar-width: none;
+}
+
+/* Each card */
+.card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background: rgba(255, 255, 255, 0.15); /* semi-transparent white */
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); /* main blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  min-width: 260px;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+  color: var(--white-color);
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  /* color: var(--red-color); */
+  color: rgb(228, 228, 3);
+
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: rgb(0, 238, 255);
+  line-height: 1.5;
+}
+
+/* Responsive tweaks */
+@media (min-width: 768px) {
+  .card {
+    min-width: 280px;
+  }
+}
+@media (min-width: 1024px) {
+  .card {
+    min-width: 320px;
+  }
+}
+
+/* Carousel Ends  */
+#services {
+  position: relative;
+
+  /* padding: 2rem 1rem; */
+  color: black;
+  /* background: none;  */
+  /* remove background from section */
+}
+
+#services h2 {
+  position: relative;
+  z-index: 2; /* above overlay */
+  margin-bottom: 1rem;
+}
+
+/* Wrap the cards in a container to apply background + overlay */
+.cards-wrapper {
+  position: relative;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcybKKoN5Moixbi4ZcLhRlk3WcCISnmPIZ9w&s")
+    center/cover no-repeat;
+  border-radius: 10px;
+  padding: 1rem;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Overlay inside cards-wrapper */
+.cards-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Cards inside wrapper must be positioned above overlay */
+.cards {
+  position: relative;
+  z-index: 1;
+}
+
+/* Glass effect on cards remains same */
+.card {
+  background: rgba(7, 6, 6, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  /* ... other styles */
+  color: var(--white-color);
+}
