@@ -177,6 +177,7 @@ nav a {
   white-space: nowrap;
   /* color: var(--red-color); */
   color: rgb(250, 250, 6);
+  font-family: "Playfair Display", serif;
 }
 
 @keyframes scrollWords {
