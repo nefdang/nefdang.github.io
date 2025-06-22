@@ -9,6 +9,7 @@
   --black-color: #000000;
   --white-color: #ffffff;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -16,59 +17,97 @@
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 section {
-  scroll-margin-top: 220px; /* Adjust to match your header height */
+  scroll-margin-top: 220px;
+  padding: 1rem;
 }
 
+/* Hero Section */
 .hero {
-}
-.hero-content {
+  position: relative;
   height: 90vh;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcybKKoN5Moixbi4ZcLhRlk3WcCISnmPIZ9w&s")
+    center/cover no-repeat;
+  filter: brightness(0.3);
+  z-index: -2;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
+  z-index: 1;
 }
+
 .hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   line-height: 1.2;
 }
 
+/* Body & Global */
 body {
   background-color: #f9f9f9;
-  color: #333;
+  color: var(--text-color);
 }
 
+/* Header */
 header {
   background-color: var(--red-color);
   color: white;
   padding: 1rem;
 }
-header > #company {
-  text-align: center;
+
+#company {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
-header > #company > #logoandName {
+
+#logoandName {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 0rem;
 }
-header > #company > #logoandName > img {
+
+#logoandName img {
   height: 100%;
   width: 20%;
 }
-#company > #logoandName > .name {
+
+#logoandName .name {
   font-size: 2.5rem;
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
 }
+
+/* Navigation */
 .nav-links {
   list-style: none;
 }
+
 nav {
   display: flex;
   flex-direction: column;
@@ -77,18 +116,20 @@ nav {
   border-radius: 8px;
   line-height: 3rem;
 }
+
 nav li {
   background-color: var(--blue-color);
   border-radius: 5px;
-  margin: 5px;
-  padding: 0rem 1rem;
+  margin: 5px 0;
+  padding: 0 1rem;
 }
+
 nav a {
   color: white;
   text-decoration: none;
   padding: 0.5rem 0;
 }
-/* Initial hidden state */
+
 .nav-links.hidden-nav {
   max-height: 0;
   overflow: hidden;
@@ -96,33 +137,28 @@ nav a {
   transition: all 0.4s ease-in-out;
 }
 
-/* Shown state */
 .nav-links.open-nav {
-  max-height: 300px; /* adjust based on your content height */
+  max-height: 300px;
   opacity: 1;
   transition: all 0.4s ease-in-out;
   flex-direction: column;
 }
 
-/* Slider Starts */
+/* Word Slider */
 .word-slider {
   display: inline-block;
   height: 4rem;
   overflow: hidden;
   vertical-align: middle;
-  /* background-color: red; */
   position: relative;
-  margin-left: 0.5rem;
-  color: var(--white-color); /* or choose a visible color */
+  color: var(--white-color);
   font-weight: 600;
 }
 
 .word-list {
   display: flex;
-  font-size: 3.5rem;
-
-  /* background-color: white; */
   flex-direction: column;
+  font-size: 3.5rem;
   animation: scrollWords 32s ease-in-out infinite;
 }
 
@@ -137,7 +173,6 @@ nav a {
   color: var(--red-color);
 }
 
-/* Smooth vertical scrolling with pause */
 @keyframes scrollWords {
   0%,
   10% {
@@ -181,11 +216,7 @@ nav a {
   }
 }
 
-/* Slider Ends */
-
-section {
-  padding: 1rem;
-}
+/* Form and Reviews Section */
 .inquiry-form,
 .reviews,
 .visa-reviews {
@@ -195,18 +226,25 @@ section {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* Course List */
 .course-list {
   list-style: none;
   margin-top: 1rem;
 }
+
 .course-list li {
   margin-bottom: 0.5rem;
 }
+
+/* Map */
 .map iframe {
   width: 100%;
   height: 250px;
   border: 0;
 }
+
+/* Footer */
 footer {
   background-color: #004c99;
   color: white;
@@ -214,24 +252,25 @@ footer {
   text-align: center;
   margin-top: 2rem;
 }
+
+/* Responsive Navigation */
 @media (min-width: 768px) {
   nav {
     flex-direction: row;
     justify-content: space-around;
   }
+
   nav a {
     padding: 1rem;
   }
 }
 
-/* animation */
-/* .reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+/* Glass Effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-} */
