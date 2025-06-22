@@ -23,6 +23,19 @@ section {
   scroll-margin-top: 220px; /* Adjust to match your header height */
 }
 
+.hero {
+}
+.hero-content {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-content h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+}
+
 body {
   background-color: #f9f9f9;
   color: #333;
@@ -90,6 +103,85 @@ nav a {
   transition: all 0.4s ease-in-out;
   flex-direction: column;
 }
+
+/* Slider Starts */
+.word-slider {
+  display: inline-block;
+  height: 4rem;
+  overflow: hidden;
+  vertical-align: middle;
+  /* background-color: red; */
+  position: relative;
+  margin-left: 0.5rem;
+  color: var(--white-color); /* or choose a visible color */
+  font-weight: 600;
+}
+
+.word-list {
+  display: flex;
+  font-size: 3.5rem;
+
+  /* background-color: white; */
+  flex-direction: column;
+  animation: scrollWords 32s ease-in-out infinite;
+}
+
+.word-list span {
+  height: 4rem;
+  font-size: 3.5rem;
+  display: flex;
+  line-height: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+  white-space: nowrap;
+  color: var(--red-color);
+}
+
+/* Smooth vertical scrolling with pause */
+@keyframes scrollWords {
+  0%,
+  10% {
+    transform: translateY(0);
+  }
+  11%,
+  20% {
+    transform: translateY(-4rem);
+  }
+  21%,
+  30% {
+    transform: translateY(-8rem);
+  }
+  31%,
+  40% {
+    transform: translateY(-12rem);
+  }
+  41%,
+  50% {
+    transform: translateY(-16rem);
+  }
+  51%,
+  60% {
+    transform: translateY(-20rem);
+  }
+  61%,
+  70% {
+    transform: translateY(-24rem);
+  }
+  71%,
+  80% {
+    transform: translateY(-28rem);
+  }
+  81%,
+  90% {
+    transform: translateY(-32rem);
+  }
+  91%,
+  100% {
+    transform: translateY(-36rem);
+  }
+}
+
+/* Slider Ends */
 
 section {
   padding: 1rem;
