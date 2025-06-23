@@ -152,11 +152,7 @@
       <!-- OUTSIDE THE GLASS FORM -->
 
       <div class="contact-form-wrapper">
-        <form
-          id="contactForm"
-          action="https://api.web3forms.com/submit"
-          method="POST"
-        >
+        <form id="contactForm" onsubmit="handleFormSubmit(event)">
           <!-- Replace with your Access Key -->
           <input
             type="hidden"
