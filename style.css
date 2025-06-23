@@ -482,16 +482,15 @@ footer {
 
 /* Contact  */
 .contact-section {
-  padding: 4rem 1rem;
-  text-align: center;
-  background-color: #f4f4f4;
+  padding: 2rem 0.1rem;
+  /* text-align: center; */
 }
 
 .contact-heading {
-  font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: var(--text-color);
+  margin-left: 1rem;
   font-family: "Playfair Display", serif;
+  color: black;
 }
 
 /* Glassmorphic form wrapper */
@@ -644,4 +643,9 @@ footer {
 
 .social-link img {
   filter: none;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
 }
