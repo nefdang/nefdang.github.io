@@ -133,8 +133,9 @@ nav {
 
 nav li {
   /* background-color: var(--dark-blue-color); */
-  background-color: rgb(1, 1, 107);
-  border-radius: 5px;
+  background-color: rgb(255, 78, 78);
+  border: 1px solid white;
+  border-radius: 10px;
   margin: 5px 0;
   padding: 0 1rem;
 }
@@ -492,7 +493,7 @@ footer {
   margin-bottom: 2rem;
   margin-left: 1rem;
   font-family: "Playfair Display", serif;
-  color: black;
+  color: rgb(14, 13, 13);
 }
 
 /* Glassmorphic form wrapper */
