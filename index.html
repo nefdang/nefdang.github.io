@@ -127,40 +127,73 @@
     </section>
 
     <section id="contact" class="section reveal contact-section">
-      <h2>Contact Us</h2>
-      <form id="contactForm">
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Your Name"
-          required
-        />
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Your Email"
-          required
-        />
-        <textarea
-          id="message"
-          name="message"
-          placeholder="Your Message"
-          required
-        ></textarea>
-        <button type="submit">Send via WhatsApp</button>
-      </form>
+      <h2 class="contact-heading">Contact Us</h2>
+      <!-- OUTSIDE THE GLASS FORM -->
+
+      <div class="contact-form-wrapper">
+        <form id="contactForm">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your Name"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your Email"
+            required
+          />
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit">Send via WhatsApp</button>
+        </form>
+      </div>
     </section>
 
-    <a
-      href="https://wa.me/97798XXXXXXXX"
-      class="whatsapp-float"
-      target="_blank"
-      aria-label="Chat on WhatsApp"
-    >
-      <img src="whatsapp-icon.png" alt="WhatsApp Icon" />
-    </a>
+    <section id="social-media" class="section social-media-section">
+      <h2>Connect with Us</h2>
+      <div class="social-icons">
+        <a
+          href="https://www.facebook.com/yourpage"
+          target="_blank"
+          aria-label="Facebook"
+          class="social-link facebook"
+        >
+          <img src="./assets/images/fb.png" alt="Facebook" />
+        </a>
+        <a
+          href="https://www.instagram.com/yourprofile"
+          target="_blank"
+          aria-label="Instagram"
+          class="social-link instagram"
+        >
+          <img src="./assets/images/insta.png" alt="Instagram" />
+        </a>
+        <a
+          href="https://www.tiktok.com/@yourprofile"
+          target="_blank"
+          aria-label="TikTok"
+          class="social-link tiktok"
+        >
+          <img src="./assets/images/tiktok.png" alt="TikTok" />
+        </a>
+        <a
+          href="https://wa.me/97798XXXXXXXX"
+          target="_blank"
+          aria-label="WhatsApp"
+          class="social-link whatsapp"
+        >
+          <img src="./assets/images/whatsapp.png" alt="WhatsApp" />
+        </a>
+      </div>
+    </section>
 
     <footer class="footer">
       <p>&copy; 2025 Next Education Foundation | Lamahi, Dang, Nepal</p>
@@ -171,5 +204,8 @@
 
     <!-- Number increasing  -->
     <script src="./number.js"></script>
+
+    <!-- Contact  -->
+    <script src="./contact.js"></script>
   </body>
 </html>
