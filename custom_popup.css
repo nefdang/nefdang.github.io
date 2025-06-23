@@ -22,11 +22,12 @@
   border-radius: 8px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   z-index: 1000;
+  width: 85%;
 }
 
 /* Close Button */
 .popup-box .close-btn {
-  background: #ff5c5c;
+  background: green;
   color: white;
   border: none;
   padding: 10px 20px;
