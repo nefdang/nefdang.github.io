@@ -47,7 +47,7 @@ section {
   inset: 0;
   background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcybKKoN5Moixbi4ZcLhRlk3WcCISnmPIZ9w&s")
     center/cover no-repeat;
-  filter: brightness(0.3);
+  filter: brightness(0.5);
   z-index: -2;
 }
 
@@ -55,7 +55,7 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.3);
   z-index: -1;
 }
 
