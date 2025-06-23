@@ -48,9 +48,10 @@ let observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         statNumbers.forEach((stat) => animateCount(stat));
-      } else {
-        statNumbers.forEach((stat) => (stat.textContent = "0+"));
       }
+      // else {
+      //   statNumbers.forEach((stat) => (stat.textContent = "0+"));
+      // }
     });
   },
   {
