@@ -84,7 +84,8 @@ section {
 }
 #next {
   /* color: yellow; */
-  color: rgb(255, 72, 0);
+  /* color: rgb(255, 72, 0); */
+  color: var(--red-color);
   font-weight: bold;
   font-size: 2.2rem;
 }
